@@ -1,2 +1,2 @@
-# Dashboards-Practice
- A collection of Dashboards for practice
+# Dashboards
+ Practice creating dashboards from API call
