@@ -1,0 +1,54 @@
+.current-location-panel {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.panel-title {
+  font-size: 2rem;
+  margin-bottom: 24px;
+  margin-left: 12px;
+  color: #333;
+  font-weight: 600;
+  width: calc(100% - 60px);
+  text-align: left;
+  line-height: 1.2;
+  padding: 0;
+  height: 48px; /* Fixed height to match city-header */
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+/* Add space between weather card and city search */
+.current-location-panel > *:not(:last-child) {
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+/* Center and wrap the weather card */
+.current-location-panel .weather-card {
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding: 24px 30px;
+  width: calc(100% - 60px); /* Account for parent padding */
+  max-width: 400px;
+}
+
+/* Adjust spacing for error message and loading spinner */
+.error-message, .loading-spinner {
+  align-self: center;
+  margin: 20px 0;
+}
+
+/* City search container */
+.city-search {
+  width: calc(100% - 60px);
+  max-width: 400px;
+  margin: 0 auto;
+} 

@@ -1,0 +1,128 @@
+.weather-card {
+  border-radius: 12px;
+  padding: 24px 30px;
+  width: calc(100% - 60px);
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  margin: 0 auto;
+}
+
+.weather-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.weather-info {
+  flex: 1;
+  transition: color 0.3s ease;
+}
+
+.city-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.weather-main-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.weather-emoji {
+  font-size: 2.5rem;
+  line-height: 1;
+  cursor: help;
+  transition: transform 0.2s ease;
+}
+
+.weather-emoji:hover {
+  transform: scale(1.1);
+}
+
+.temperature {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.local-time {
+  font-size: 1.25rem;
+  color: inherit;
+  opacity: 0.8;
+  font-weight: 500;
+  margin-left: 8px;
+  padding-left: 12px;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.description {
+  font-size: 1rem;
+  opacity: 0.9;
+  text-transform: capitalize;
+  margin-top: 4px;
+}
+
+.weather-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 16px;
+}
+
+.detail-item {
+  text-align: center;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.detail-label {
+  opacity: 0.8;
+  font-size: 0.875rem;
+  margin-bottom: 4px;
+}
+
+.detail-value {
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+@media (max-width: 1400px) {
+  .weather-card {
+    width: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .weather-card {
+    width: calc(100% - 40px);
+    padding: 20px;
+  }
+  
+  .current-location-panel .weather-card,
+  .city-search {
+    width: calc(100% - 40px);
+  }
+  
+  .city-name {
+    font-size: 1.25rem;
+  }
+  
+  .weather-emoji {
+    font-size: 2rem;
+  }
+  
+  .temperature {
+    font-size: 1.75rem;
+  }
+} 

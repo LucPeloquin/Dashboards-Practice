@@ -1,0 +1,133 @@
+.city-list {
+  display: grid;
+  grid-template-columns: 400px; /* Match dashboard-grid first column */
+  gap: 0px;
+  margin-top: 30px;
+  margin-bottom: 0; /* Removed margin bottom */
+  align-items: start;
+}
+
+.city-item {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 360px;
+  min-width: 360px;
+  max-width: 360px;
+  margin-bottom: 0; /* Removed margin bottom */
+}
+
+.city-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.city-header {
+  width: calc(100% - 60px);
+  max-width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+  padding-bottom: 0px;
+  border-bottom: 1px solid #eee;
+  margin-top: 30px; /* Increased to match panel-title position */
+  height: 48px;
+}
+
+.city-header h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.remove-city {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #666;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.remove-city:hover {
+  color: #dc3545;
+  background-color: rgba(220, 53, 69, 0.1);
+}
+
+/* Adjust weather card spacing */
+.city-item .weather-card {
+  width: calc(100% - 60px);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Ensure consistent spacing between weather card and forecast */
+.city-item > * + * {
+  margin-top: 24px;
+}
+
+/* Forecast container styling to match weather card width */
+.city-item .forecast-container {
+  width: calc(100% - 60px);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Media Queries for Responsive Grid */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .city-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .city-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1400px) {
+  .city-list {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+  
+  .city-item {
+    width: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .city-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .city-item {
+    width: 100%;
+    min-width: unset;
+    max-width: 100%;
+  }
+  
+  .city-header {
+    width: calc(100% - 40px);
+    margin-top: -4px;
+  }
+  
+  .city-item .weather-card,
+  .city-item .forecast-container {
+    width: calc(100% - 40px);
+  }
+} 

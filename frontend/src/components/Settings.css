@@ -1,0 +1,24 @@
+.settings-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+  font-size: 1.25rem;
+  padding: 0;
+  z-index: 1000;
+}
+
+.settings-button:hover {
+  transform: rotate(30deg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+} 
